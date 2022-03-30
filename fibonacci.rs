@@ -9,8 +9,8 @@ fn fib(n: i32) -> i32{
 }
 
 fn main() {
-    let start = Instant::now();
     let n = 40;
+    let start = Instant::now();
     let res = fib(n);
     let time = start.elapsed();
 
