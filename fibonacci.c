@@ -13,11 +13,13 @@ int main()
 {
     struct timeval start, stop;
     int n = 40;
+    int sum;
 
     gettimeofday(&start, NULL);
-    printf("fib(%d) = %d\n", n, fib(n));
+    sum = fib(n);
     gettimeofday(&stop, NULL);
     
+    printf("fib(%d) = %d\n", n, sum);
     printf("time    = %ld milliseconds\n",
     (((stop.tv_sec * 1000000 + stop.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)))/1000);
 
