@@ -4,10 +4,14 @@ class fibonacci {
     static void Main()
     {
         int n = 40;
-        long startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-        Console.WriteLine("fib(" + n + ") = " +fib(n));
+        int sum;
+	
+	long startTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+       	sum = fib(n);
         long endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
-        Console.WriteLine("time    = " + (endTime - startTime) + " milliseconds");
+        
+	Console.WriteLine("fib(" + n + ") = " + sum);
+	Console.WriteLine("time    = " + (endTime - startTime) + " milliseconds");
     }
     
     static int fib(int n)
