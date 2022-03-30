@@ -12,8 +12,8 @@ fn main() {
     let start = Instant::now();
     let n = 40;
     let res = fib(n);
-    println!("fib({}) = {}", n, res);
-
     let time = start.elapsed();
+
+    println!("fib({}) = {}", n, res);
     println!("time    = {:.2?}", time);
 }
