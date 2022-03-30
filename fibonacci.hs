@@ -2,6 +2,7 @@ import Control.Exception (evaluate)
 import Data.Int (Int64)
 import Data.Time
 import Data.Time.Clock.POSIX (utcTimeToPOSIXSeconds)
+import Text.Printf (printf)
 
 msSinceEpoch :: UTCTime -> Int64
 msSinceEpoch = floor . (1000 *) . nominalDiffTimeToSeconds . utcTimeToPOSIXSeconds
@@ -19,5 +20,5 @@ main = do
   x <- getCurrentTime
   r <- evaluate $ fib n
   y <- getCurrentTime
-  putStrLn $ "fib(" <> show n <> ") = " <> show r
-  putStrLn $ "time    = " <> show (msSinceEpoch y - msSinceEpoch x) <> " milliseconds"
+  printf "fib(%d) = %d\n" n r
+  printf "time    = %d milliseconds\n" (msSinceEpoch y - msSinceEpoch x)
