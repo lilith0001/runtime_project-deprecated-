@@ -15,5 +15,5 @@ fn main() {
     println!("fib({}) = {}", n, res);
 
     let time = start.elapsed();
-    println!("time elapsed = {:.2?}", time);
+    println!("time    = {:.2?}", time);
 }
